@@ -19,27 +19,30 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
-
-<h2>Deployment and Configuration Steps</h2>
+- Create two VMs (client 1) and (Domain Controller ) with the same VNET on Azure.
+- Change the IP configuration of the DC machine from Dynamic to Static.
+- Join the client machine to the domain.
+- Configure the DNS setting on the client machine.
+- Client machine uses DC as DNS server.
+  
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<img width="587" alt="image" src="https://github.com/abdijalilimam/ostickets-ad/assets/137457871/aa0f0d30-07fc-443e-b210-b8cc47af2b0d">
 </p>
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Create two Virtual Machines, name them appropriately and make sure they have VNET when creating.</p>
+<p>
+<img width="1321" alt="image" src="https://github.com/abdijalilimam/ostickets-ad/assets/137457871/f92bc579-29d5-4e8c-ab2e-aace17e0f8c8">
 </p>
 
 <br /> 
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Configure the IP setting on the Domain Controller machine from Dynamic to Static. 
 </p>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1434" alt="Screenshot 2023-08-27 at 11 49 15 AM" src="https://github.com/abdijalilimam/ostickets-ad/assets/137457871/2776344e-d1a4-41c3-ba8c-d12a07c7370d">
 </p>
 
 <br />
