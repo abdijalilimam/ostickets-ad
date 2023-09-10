@@ -80,13 +80,53 @@ Check back at Client-1 to see the ping succeed
 </p>
 
 <p>
-  We can start now creating Organizational Units (OU) after we complete our previous step. Let's first create an Organizational Unit named _EMPLOYEES. In order to do that right-click on the domain area. Select new--> Organizational Unit and fill out the sections. Then click inside of your OU and right-click it, select new and select user, and fill out the information for your new user. The user should be named Jane Doe, she is going to be an Admin so her username will be Jane_admin. Lastly, add Jane to the domain admin's security group. Create another OU named _ADMINS
+  We can start creating Organizational Units (OU) after we complete our previous steps. Let's first create an Organizational Unit named _EMPLOYEES. In order to do so right-click on the domain area. Select new---> Organizational Unit and fill out the sections. Then click inside of your OU and right-click it, select new select user, and fill out the information. The user would be named abdi jalil in this case yours could be different, he is going to be an Admin so her username will be Abdi_admin. Lastly, add Abdi to the domain admin's security group. Create another OU named _ADMINS as well.
 </p>
 <p>
-  ![Uploading Screenshot 2023-08-27 at 12.37.49 PM.png…]()
-</p>
-<p>
-  ![Uploading Screenshot 2023-08-27 at 12.42.21 PM.png…]()
+<img width="1439" alt="Screenshot 2023-08-27 at 12 37 49 PM" src="https://github.com/abdijalilimam/ostickets-ad/assets/137457871/39f56fbb-57d6-480a-8d0d-bd25044e3deb">
 </p>
 
+<p>
+<img width="1431" alt="Screenshot 2023-08-27 at 12 42 21 PM" src="https://github.com/abdijalilimam/ostickets-ad/assets/137457871/6d3c186f-2f6c-46a2-97a7-e4dfea1d3c72">
+</p>
+
+<p>
+<img width="1435" alt="Screenshot 2023-08-27 at 12 47 18 PM" src="https://github.com/abdijalilimam/ostickets-ad/assets/137457871/2baec315-12f0-4c67-81ac-7a2e8a41faaf">
+</p>
+
+<p>
+  From now on we will use Abdi_admin as an administrator account. Now we are finally ready to join client-1 to my domain which is "abdijalil.com" the same one we created earlier. Then From the Azure Portal, we will set Client-1’s DNS settings to the DC’s Private IP address. 
+</p> 
+
+<p>
+<img width="1429" alt="Screenshot 2023-08-27 at 12 58 39 PM" src="https://github.com/abdijalilimam/ostickets-ad/assets/137457871/9f30490e-554e-433f-ad4a-4e56afb719e5">
+</p>
+
+<p>
+<img width="1440" alt="Screenshot 2023-08-27 at 12 57 18 PM" src="https://github.com/abdijalilimam/ostickets-ad/assets/137457871/849a24f3-f809-45ea-bc3b-9c7792f9b610">
+</p>
+
+  <p>
+  From the Azure Portal, we will restart Client-1 Login to Client-1 (Remote Desktop) as the original local admin (labuser), and join it to the domain (computer will restart). To do that go to the system setting and click on about and under advanced click on rename this PC. From there select the domain and type in "abdijalil.com  after that type in abdijalil.com\abdi_admin then after the computer restarts client-1 should be part of your domain. Then finally Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain.
+</p>
+
+<p>
+<img width="1440" alt="Screenshot 2023-08-27 at 1 22 48 PM" src="https://github.com/abdijalilimam/ostickets-ad/assets/137457871/c9ed46e2-ef22-406c-982d-d69e45b315dc">
+</p>
+
+<p>
+<img width="1403" alt="Screenshot 2023-08-27 at 1 29 50 PM" src="https://github.com/abdijalilimam/ostickets-ad/assets/137457871/b91d25b4-cda5-498d-b99f-1aa657b93b80">
+</p>
+
+<p>
+Login to DC-1 as jane_admin and open PowerShell_ise as an administrator. Create a new File and paste the contents of the script into it <a herf="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1" </a>. Run the script and observe the accounts being created after it finished, open ADUC and observe the accounts in the appropriate OU then lastly attempt to log into Client-1 with one of the accounts (remember the password in the script). Configurations you finished.
+</p>
+
+<p>
+  <img width="1440" alt="Screenshot 2023-08-27 at 1 36 49 PM" src="https://github.com/abdijalilimam/ostickets-ad/assets/137457871/eac509a0-fcff-4b6d-9411-979cd4bb1d6e">
+</p>
+
+<p>
+<img width="1437" alt="Screenshot 2023-08-27 at 1 33 18 PM" src="https://github.com/abdijalilimam/ostickets-ad/assets/137457871/d156dd90-172c-4369-af92-813fade03257">
+</p>
 <br />
